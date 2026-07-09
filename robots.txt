@@ -1,0 +1,5 @@
+# Se permite el rastreo de todo el sitio a todos los buscadores
+User-agent: *
+Allow: /
+
+Sitemap: https://julietasiganevich.com/sitemap.xml

@@ -1,0 +1,19 @@
+version: 1
+frontend:
+  phases:
+    build:
+      commands: []          # Sitio estático: no hay nada que compilar
+  artifacts:
+    baseDirectory: /        # Raíz del repo (donde está index.html)
+    files:
+      - '**/*'
+  cache:
+    paths: []
+
+# Cabeceras HTTP personalizadas
+customHeaders:
+  # llms.txt es para modelos de IA, pero NO debe aparecer indexado en buscadores
+  - pattern: '/llms.txt'
+    headers:
+      - key: 'X-Robots-Tag'
+        value: 'noindex'
